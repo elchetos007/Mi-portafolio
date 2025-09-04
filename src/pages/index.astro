@@ -1,11 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/badge.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import SocialPill from '../components/socialPill.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout tittle="welcome to Astro.">
+	<main>
+		<section class=" w-full mx-auto lg:w-[740px] py-35">
+		<img 
+        	class="rounded-full w-15 h-15 mb-4" 
+        	src="yo.jpg" 
+        	alt="Jose photo"
+    	/>
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+			Hola, Jose Dev<a 
+			href="https://www.linkedin.com/in/jose-david-usuga-fuentes-751755382/" 
+			target="_blank"
+			rel="noopener" 
+			class="flex justify-center items-center"
+			>
+				<Badge> Disponible para trabajar</Badge>
+			</a>
+		</h1>
+		<h2 class="text-xl text-wrap ">
+			Profesional con experiencia en desarrollo de software y gestión de bases de datos MySQL, capaz de
+			adaptarme a diversos lenguajes de programación como C++, Java, Python y PHP. Cuento con
+			conocimientos prácticos en tecnologías cloud, específicamente AWS, Docker y N8N, lo que me permite
+			implementar soluciones eficientes en entornos tecnológicos variados. 
+		</h2>
+
+		<ul>
+			<li>
+				<SocialPill>
+					<LinkedInIcon class=" w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+			</li>
+		</ul>
+		</section>
+	</main>
 </Layout>
