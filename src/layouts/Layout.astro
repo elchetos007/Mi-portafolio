@@ -30,7 +30,7 @@ import "../styles/global.css";
 	html {
 		
 		font-family: "onest variable",system-ui, sans-serif;
-
+		scroll-behavior: smooth;
 	}
 
 	body {
@@ -39,4 +39,11 @@ import "../styles/global.css";
 		flex-direction: column;
 		min-height: 100vh;
 	}
+
+	@media (prefers-reduced-montion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+
 </style>

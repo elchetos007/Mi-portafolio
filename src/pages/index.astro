@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Badge from '../components/badge.astro';
 import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
 import SocialPill from '../components/socialPill.astro';
+import Github from '../components/icons/Github.astro';
+import Email from '../components/icons/Email.astro';
+import Experience from '../components/Experience.astro';
+import SectionsContainer from '../components/SectionsContainer.astro';
+import Maleta from '../components/icons/maleta.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -10,9 +15,9 @@ import SocialPill from '../components/socialPill.astro';
 
 <Layout tittle="welcome to Astro.">
 	<main>
-		<section class=" w-full mx-auto lg:w-[740px] py-35">
+		<SectionsContainer class="py-35 pb-20">
 		<img 
-        	class="rounded-full w-15 h-15 mb-4" 
+        	class="rounded-full size-15 mb-4" 
         	src="yo.jpg" 
         	alt="Jose photo"
     	/>
@@ -33,14 +38,29 @@ import SocialPill from '../components/socialPill.astro';
 			implementar soluciones eficientes en entornos tecnológicos variados. 
 		</h2>
 
-		<ul>
-			<li>
-				<SocialPill>
-					<LinkedInIcon class=" w-6 h-6" />
+		<nav class="flex gap-x-5 mt-5">
+				<SocialPill href="https://www.linkedin.com/in/jose-david-usuga-fuentes-751755382/">
+					<LinkedInIcon class="size-6"/>
 					LinkedIn
 				</SocialPill>
-			</li>
-		</ul>
-		</section>
+				<SocialPill href=" https://github.com/elchetos007">
+					<Github class="size-6"/>
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:usugafuentesj@gmail.com" >
+					<Email class ="size-6"/>
+					usugafuentesj@gmail.com
+				</SocialPill>
+		</nav>
+
+		</SectionsContainer>
+
+		<SectionsContainer id="Experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Maleta class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience/>
+		</SectionsContainer>
 	</main>
 </Layout>
